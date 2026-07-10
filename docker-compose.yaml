@@ -38,7 +38,7 @@ services:
       test:
         [
           "CMD-SHELL",
-          "wget -qO- http://127.0.0.1:9000/api/system/status | grep -q '\"status\":\"UP\"'",
+          "curl -sf http://127.0.0.1:9000/api/system/status | grep -q '\"status\":\"UP\"'",
         ]
       interval: 10s
       timeout: 10s
